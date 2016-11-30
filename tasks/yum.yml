@@ -1,0 +1,11 @@
+---
+- name: Install yum packages
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - php
+  - mod_php
+  - php-devel
+  - php-pear
+  - gcc

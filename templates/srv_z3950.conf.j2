@@ -1,0 +1,19 @@
+<VirtualHost *:443>
+
+  Include /etc/httpd/conf.d/00ssl.include
+  SSLCertificateFile ${HTTPD_CERT_PATH}/star.${HTTPD_DN_SUFFIX}/cert.pem
+  SSLCertificateKeyFile ${HTTPD_KEY_PATH}/star.${HTTPD_DN_SUFFIX}/privkey.pem
+  SSLCertificateChainFile ${HTTPD_CERT_PATH}/star.${HTTPD_DN_SUFFIX}/chain.pem
+
+  ServerName {{ alma_z3950_gateway_hostname }}.${HTTPD_DN_SUFFIX}
+  DocumentRoot /srv/{{ alma_z3950_gateway_hostname }}/cgi-bin
+
+  <Directory "/srv/{{ alma_z3950_gateway_hostname }}/cgi-bin">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+    Require all granted
+  </Directory>
+
+</VirtualHost>

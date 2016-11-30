@@ -1,0 +1,6 @@
+---
+# defaults file for alma-z3950-gateway
+alma_z3950_gateway_target:
+alma_z3950_gateway_hostname: z3950
+apc_username:
+apc_password:
