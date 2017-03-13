@@ -3,16 +3,16 @@
 
 - include: yum.yml
   tags: alma_z3950_gateway_yum
-  sudo: yes
+  become: true
 
 - include: pear.yml
   tags: alma_z3950_gateway_pear
-  sudo: yes
+  become: true
 
 - include: configure.yml
   tags: alma_z3950_gateway_configure
-  sudo: yes
+  become: true
 
 - include: assets.yml
   tags: alma_z3950_gateway_assets
-  sudo: yes
+  become: true
