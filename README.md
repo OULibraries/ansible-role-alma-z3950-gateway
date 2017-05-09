@@ -42,7 +42,7 @@ Example Playbook
 License
 -------
 
-TBD
+[MIT](https://github.com/OULibraries/ansible-role-zlma-z3950-gateway/blob/master/LICENSE)
 
 Author Information
 ------------------
